@@ -83,6 +83,14 @@ class MealDetailScreen extends StatelessWidget {
           children: ingredients,
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.delete),
+        onPressed: () {
+          // pop current page -> show previuos page
+          Navigator.of(context)
+              .pop(mealId); // do not display thie meal on the items page
+        },
+      ),
     );
   }
 }
