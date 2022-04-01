@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screens/meal_details_screen.dart';
-import '../screens/tabs_screen_top.dart';
+import '../screens/tabs_screen_bottom.dart';
 import '../screens/category_meals_screen.dart';
 import '../screens/categories_screen.dart';
 
@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
             .copyWith(secondary: Colors.amber),
       ),
-      home: const TabsScreenTop(),
+      home: const TabsScreenBottom(),
       routes: {
         CategoryMealsScreen.routeCategoryMeals: (ctx) =>
             const CategoryMealsScreen(),
