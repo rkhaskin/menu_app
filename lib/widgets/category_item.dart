@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './category_meals_screen.dart';
+import '../screens/category_meals_screen.dart';
 
 class CategoryItem extends StatelessWidget {
   final String id;
@@ -14,10 +14,9 @@ class CategoryItem extends StatelessWidget {
   }) : super(key: key);
 
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).push(
-      MaterialPageRoute(builder: (_) {
-        return CategoryMealsScreen(id, title);
-      }),
+    Navigator.of(ctx).pushNamed(
+      CategoryMealsScreen.routeCategoryMeals,
+      arguments: {'id': id, 'title': title},
     );
   }
 
@@ -30,7 +29,7 @@ class CategoryItem extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(15),
         child: Text(
-          title!,
+          title,
           style: Theme.of(context).textTheme.headline6,
         ),
         decoration: BoxDecoration(
