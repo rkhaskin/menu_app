@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './categories_screen.dart';
 import './favorites_screen.dart';
+import './main_drawer.dart';
 
 class TabsScreenTop extends StatefulWidget {
   const TabsScreenTop({Key? key}) : super(key: key);
@@ -16,6 +17,7 @@ class _TabsScreenTopState extends State<TabsScreenTop> {
         length: 2,
         initialIndex: 0,
         child: Scaffold(
+          drawer: const MainDrawer(),
           appBar: AppBar(
             title: const Text('Meals'),
             bottom: const TabBar(
