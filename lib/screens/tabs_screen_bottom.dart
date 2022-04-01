@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './main_drawer.dart';
 import './categories_screen.dart';
 import './favorites_screen.dart';
 
@@ -31,6 +32,7 @@ class _TabsScreenBottomState extends State<TabsScreenBottom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const MainDrawer(),
       appBar: AppBar(title: _pages[_selectedTabIndex]['title'] as Widget),
       body: _pages[_selectedTabIndex]['page'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
