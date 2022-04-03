@@ -9,7 +9,6 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
-  final Function removeItem;
 
   const MealItem(
       {required this.id,
@@ -18,7 +17,6 @@ class MealItem extends StatelessWidget {
       required this.duration,
       required this.complexity,
       required this.affordability,
-      required this.removeItem,
       Key? key})
       : super(key: key);
 
@@ -32,7 +30,7 @@ class MealItem extends StatelessWidget {
       // triggered after the page is popped or back button is clicked
       // when back button is clicked, no id is passed, so check if null
       if (result != null) {
-        removeItem(result);
+        // removeItem(result);
       }
     });
   }
